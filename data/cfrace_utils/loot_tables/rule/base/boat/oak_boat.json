@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:oak_boat",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cfru_rules:1b,cfru_boat:1b,cfru_a_boat:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

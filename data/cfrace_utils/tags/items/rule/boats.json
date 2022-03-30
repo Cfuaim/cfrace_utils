@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "oak_boat",
+        "spruce_boat",
+        "birch_boat",
+        "jungle_boat",
+        "acacia_boat",
+        "dark_oak_boat"
+    ]
+}

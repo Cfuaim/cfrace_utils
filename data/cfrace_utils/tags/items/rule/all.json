@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:firework_rocket",
+        "minecraft:red_stained_glass_pane",
+        "minecraft:netherite_pickaxe",
+        "minecraft:quartz_block",
+        "minecraft:elytra",
+        "#cfrace_utils:rule/boats"
+    ]
+}

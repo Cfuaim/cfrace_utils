@@ -1,0 +1,6 @@
+{
+    "values": [
+        "cfrace_utils:race/load",
+        "cfrace_utils:rule/load"
+    ]
+}

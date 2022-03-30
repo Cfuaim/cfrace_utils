@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:quartz_block",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 64
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cfru_rules:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "use_boat": {
+            "trigger": "minecraft:started_riding",
+            "conditions": {
+                "player": {
+                    "vehicle": {
+                        "type": "minecraft:boat"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cfrace_utils:rule/rules/boat/ride"
+    }
+}

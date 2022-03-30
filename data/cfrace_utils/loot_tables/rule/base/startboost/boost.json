@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "スタートブースト"
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,Fireworks:{Flight:-1b},cfru_rules:1b,cfru_startboost:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

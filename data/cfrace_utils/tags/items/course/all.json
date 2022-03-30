@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:carrot_on_a_stick",
+        "minecraft:paper",
+        "minecraft:book",
+        "minecraft:tnt",
+        "minecraft:barrier",
+        "minecraft:nether_star",
+        "minecraft:compass",
+        "minecraft:chest",
+        "minecraft:beacon",
+        "minecraft:firework_rocket",
+        "minecraft:black_stained_glass_pane"
+    ]
+}

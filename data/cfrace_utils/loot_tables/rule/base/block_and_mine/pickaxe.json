@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,HideFlags:63,Enchantments:[{lvl:5s,id:\"minecraft:efficiency\"}],cfru_rules:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
