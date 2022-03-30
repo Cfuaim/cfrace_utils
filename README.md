@@ -40,6 +40,3 @@ MinecraftJE 1.18.2
 	2.2: レース参加用スコアを1にする (/scoreboard players set @s cfru_ra_pl_part 1)
   
 	2.3: コースのスタート地点で /function #cfrace_utils:race を実行してレースを開始します
-	
-# ライセンス / License
-あとで書く
