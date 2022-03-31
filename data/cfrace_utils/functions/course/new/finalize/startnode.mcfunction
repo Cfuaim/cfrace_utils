@@ -9,3 +9,5 @@ execute store result entity @s data.CFRU.SNEnd int 1.0 run scoreboard players ge
 scoreboard players operation #NodeCount cfru_cm_node /= #2 cfru_cm_sys
 scoreboard players operation #NodeCount cfru_cm_node /= #2 cfru_cm_sys
 execute store result entity @s data.CFRU.SNBorder int 1.0 run scoreboard players operation #NodeCount cfru_cm_node *= #3 cfru_cm_sys
+#スタート方向設定
+execute positioned as @s facing entity @e[limit=1,distance=..16,sort=nearest,tag=CFRUNode,nbt={data:{CFRU:{NodeNum:1}}}] feet run tp @s ~ ~ ~ ~ ~
