@@ -11,3 +11,13 @@ tag @e[tag=CFRUStartLine] remove CFRUStartLine
 #初期化
 data remove storage cfrace_utils:race Log
 data remove storage cfrace_utils:race CourseInfo
+scoreboard players reset #CFRUWBestLap cfru_ra_bestlap
+scoreboard players reset #CFRUGoalPlayer cfru_ra_gen
+scoreboard players reset #CFRULap cfru_ra_gen
+scoreboard players reset #CFRUPointBorderM cfru_ra_gen
+scoreboard players reset #CFRUPointBorderP cfru_ra_gen
+scoreboard players reset #CFRU_Time_Tic cfru_ra_gen
+scoreboard players reset #CFRU_Tic cfru_ra_gen
+scoreboard players reset #CFRU_Min cfru_ra_gen
+scoreboard players reset #CFRU_Sec cfru_ra_gen
+scoreboard players reset #CFRU_Cse cfru_ra_gen

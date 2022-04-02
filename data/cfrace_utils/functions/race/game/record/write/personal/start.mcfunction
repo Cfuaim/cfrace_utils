@@ -1,7 +1,4 @@
 #asで呼び出す
-#初期化
-data remove storage cfrace_utils:race Tmp
-scoreboard players reset #CFRUSuccess cfru_ra_gen
 #読み出し
 data modify storage cfrace_utils:race Tmp.Base set from entity @e[limit=1,tag=CFRUTarget] data.CFRU.Record.PBestLap
 #旧記録の削除
@@ -15,3 +12,4 @@ data modify storage cfrace_utils:race Tmp.Base prepend from storage cfrace_utils
 data modify entity @e[limit=1,tag=CFRUTarget] data.CFRU.Record.PBestLap set from storage cfrace_utils:race Tmp.Base
 #初期化
 data remove storage cfrace_utils:race Tmp
+scoreboard players reset #CFRUSuccess cfru_ra_gen

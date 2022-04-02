@@ -2,19 +2,21 @@
 scoreboard objectives remove cfru_ra_pl_rank
 scoreboard objectives add cfru_ra_pl_rank dummy {"text":"=== RANK ===","color":"gold"}
 #ゴール済プレイヤー
-execute if score #GoalPlayer cfru_ra_gen matches ..-1 run scoreboard players set @a[team=cfru_ra_1st] cfru_ra_pl_rank -1
-execute if score #GoalPlayer cfru_ra_gen matches ..-2 run scoreboard players set @a[team=cfru_ra_2nd] cfru_ra_pl_rank -2
-execute if score #GoalPlayer cfru_ra_gen matches ..-3 run scoreboard players set @a[team=cfru_ra_3rd] cfru_ra_pl_rank -3
-execute if score #GoalPlayer cfru_ra_gen matches ..-4 run scoreboard players set @a[team=cfru_ra_4th] cfru_ra_pl_rank -4
-execute if score #GoalPlayer cfru_ra_gen matches ..-5 run scoreboard players set @a[team=cfru_ra_5th] cfru_ra_pl_rank -5
-execute if score #GoalPlayer cfru_ra_gen matches ..-6 run scoreboard players set @a[team=cfru_ra_6th] cfru_ra_pl_rank -6
-execute if score #GoalPlayer cfru_ra_gen matches ..-7 run scoreboard players set @a[team=cfru_ra_7th] cfru_ra_pl_rank -7
-execute if score #GoalPlayer cfru_ra_gen matches ..-8 run scoreboard players set @a[team=cfru_ra_8th] cfru_ra_pl_rank -8
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-1 run scoreboard players set @a[team=cfru_ra_1st] cfru_ra_pl_rank -1
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-2 run scoreboard players set @a[team=cfru_ra_2nd] cfru_ra_pl_rank -2
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-3 run scoreboard players set @a[team=cfru_ra_3rd] cfru_ra_pl_rank -3
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-4 run scoreboard players set @a[team=cfru_ra_4th] cfru_ra_pl_rank -4
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-5 run scoreboard players set @a[team=cfru_ra_5th] cfru_ra_pl_rank -5
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-6 run scoreboard players set @a[team=cfru_ra_6th] cfru_ra_pl_rank -6
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-7 run scoreboard players set @a[team=cfru_ra_7th] cfru_ra_pl_rank -7
+execute if score #CFRUGoalPlayer cfru_ra_gen matches ..-8 run scoreboard players set @a[team=cfru_ra_8th] cfru_ra_pl_rank -8
 #ソート開始
-scoreboard players operation #Rank cfru_ra_gen = #GoalPlayer cfru_ra_gen
+scoreboard players operation #CFRURank cfru_ra_gen = #CFRUGoalPlayer cfru_ra_gen
 #無限ループ防止
 execute store result score #CFRULoop cfru_ra_gen if entity @a[scores={cfru_ra_pl_part=1..}]
 function cfrace_utils:race/game/active/rank/loop
+scoreboard players reset #CFRULoop
+scoreboard players reset #CFRUPointMax
 #sidebar(チラツキ防止のためスコア入力後)
 scoreboard objectives setdisplay sidebar cfru_ra_pl_rank
 #title

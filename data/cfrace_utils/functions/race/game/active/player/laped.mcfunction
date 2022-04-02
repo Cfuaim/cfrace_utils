@@ -12,8 +12,8 @@ scoreboard players operation @s cfru_ra_pl_lastlaptick = #CFRU_Time_Tic cfru_ra_
 #ベストラップ判定
 function cfrace_utils:race/game/active/player/record/record
 
-#laped更新
+#CFRULaped更新
 scoreboard players add @s cfru_ra_pl_laped 1
 
 #ゴール判定
-execute if score @s cfru_ra_pl_laped > #Lap cfru_ra_gen run function cfrace_utils:race/game/active/player/goal
+execute if score @s cfru_ra_pl_laped > #CFRULap cfru_ra_gen run function cfrace_utils:race/game/active/player/goal

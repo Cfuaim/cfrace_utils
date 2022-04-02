@@ -1,4 +1,4 @@
-scoreboard players set #StartCount cfru_ra_gen 7
+scoreboard players set #CFRUStartCount cfru_ra_gen 7
 #カウント
 function cfrace_utils:race/game/countdown/schedule
 #スタートライン
@@ -7,4 +7,5 @@ function cfrace_utils:race/game/countdown/schedule
 tag @s add CFRUStartLine
 execute positioned as @e[tag=CFRUStartLine] store result score #CFRUSuccess cfru_ra_gen run forceload add ~ ~
 execute if score #CFRUSuccess cfru_ra_gen matches 1 run tag @e[tag=CFRUStartLine] add CFRUForceload
+scoreboard players reset #CFRUSuccess cfru_ra_gen
 function cfrace_utils:race/game/countdown/startline/schedule

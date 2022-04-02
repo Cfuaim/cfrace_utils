@@ -1,16 +1,16 @@
 #初期化
 scoreboard players reset #CFRU_Time_Tic cfru_ra_gen
-scoreboard players set #GoalPlayer cfru_ra_gen -1
+scoreboard players set #CFRUGoalPlayer cfru_ra_gen -1
 kill @e[tag=CFRUStartLine]
 #ラップ数設定抽出
-execute store result score #Lap cfru_ra_gen run data get storage cfrace_utils:race Settings.Laps
+execute store result score #CFRULap cfru_ra_gen run data get storage cfrace_utils:race Settings.Laps
 #例外回避
-execute unless score #Lap cfru_ra_gen matches 1.. run scoreboard players set #Lap cfru_ra_gen 1
+execute unless score #CFRULap cfru_ra_gen matches 1.. run scoreboard players set #CFRULap cfru_ra_gen 1
 #コース情報抽出
 data modify storage cfrace_utils:race CourseInfo.CourseID set from entity @s data.CFRU.CID
 data modify storage cfrace_utils:race CourseInfo.NodeEnd set from entity @s data.CFRU.SNEnd
-execute store result score #PointBorderP cfru_ra_gen run data get entity @s data.CFRU.SNBorder
-execute store result score #PointBorderM cfru_ra_gen run data get entity @s data.CFRU.SNBorder -1
+execute store result score #CFRUPointBorderP cfru_ra_gen run data get entity @s data.CFRU.SNBorder
+execute store result score #CFRUPointBorderM cfru_ra_gen run data get entity @s data.CFRU.SNBorder -1
 #レコード取得
 function cfrace_utils:race/game/record/read/read
 #ゲーム継続フラグ(rules/rules/leave用)
@@ -42,7 +42,5 @@ scoreboard players set @a[scores={cfru_ra_pl_part=1..}] cfru_ra_pl_lap 1
 scoreboard players set @a[scores={cfru_ra_pl_part=1..}] cfru_ra_pl_laped 1
 scoreboard players set @a[scores={cfru_ra_pl_part=1..}] cfru_ra_pl_lastlaptick 0
 
-#参加プレイヤーカウント
-execute store result score #RacePlayer cfru_ra_pl_sys if entity @a[scores={cfru_ra_pl_part=1..}]
 #カウントダウン開始
 function cfrace_utils:race/game/countdown/set
