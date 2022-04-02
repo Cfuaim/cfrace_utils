@@ -21,3 +21,4 @@ scoreboard players reset #CFRU_Tic cfru_ra_gen
 scoreboard players reset #CFRU_Min cfru_ra_gen
 scoreboard players reset #CFRU_Sec cfru_ra_gen
 scoreboard players reset #CFRU_Cse cfru_ra_gen
+scoreboard players reset #CFRUNodeEnd cfru_ra_gen

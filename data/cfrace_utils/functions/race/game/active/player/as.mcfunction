@@ -2,14 +2,11 @@
 #ノード取得
 scoreboard players operation #CFRUCalc cfru_ra_gen = @s cfru_ra_pl_node
 execute store result score @s cfru_ra_pl_node run data get entity @e[limit=1,sort=nearest,tag=CFRUNode] data.CFRU.NodeNum
-#変位計算
-scoreboard players operation #CFRUCalc cfru_ra_gen -= @s cfru_ra_pl_node
-#変位が閾値を超えたらLap増加/ラップ準備
-execute if score #CFRUCalc cfru_ra_gen > #CFRUPointBorderP cfru_ra_gen run function cfrace_utils:race/game/active/player/lap_add
-#スタートラインより前に出たらラップ
-execute if entity @s[scores={cfru_ra_pl_part=2}] positioned as @e[limit=1,tag=CFRUStartLine] facing entity @s feet positioned ^ ^ ^3.0 rotated as @e[limit=1,tag=CFRUStartLine] positioned ^ ^ ^-4.0 if entity @e[limit=1,tag=CFRUStartLine,distance=..5.0] run function cfrace_utils:race/game/active/player/laped
-#変位が-閾値を超えたらLap減少
-execute if score #CFRUCalc cfru_ra_gen < #CFRUPointBorderM cfru_ra_gen run scoreboard players remove @s[scores={cfru_ra_pl_lap=1..}] cfru_ra_pl_lap 1
+##Lap条件
+#片道
+execute if data storage cfrace_utils:race {CourseInfo:{OneWay:1b}} run function cfrace_utils:race/game/active/player/oneway/lap
+#周回
+execute unless data storage cfrace_utils:race {CourseInfo:{OneWay:1b}} run function cfrace_utils:race/game/active/player/round/lap
 scoreboard players reset #CFRUCalc cfru_ra_gen
 #point計算
 scoreboard players set @s cfru_ra_pl_point 100000

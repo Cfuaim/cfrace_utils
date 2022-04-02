@@ -6,4 +6,4 @@ scoreboard players set @s cfru_cm_sys 1000
 #初期化
 clear @s #cfrace_utils:course/all{cfru_cm_item:1b}
 function cfrace_utils:course/new/items
-scoreboard players set #NodeCount cfru_cm_node 0
+scoreboard players set #NodeCount cfru_cm_node -1

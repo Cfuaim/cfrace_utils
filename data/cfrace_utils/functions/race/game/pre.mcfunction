@@ -8,9 +8,10 @@ execute store result score #CFRULap cfru_ra_gen run data get storage cfrace_util
 execute unless score #CFRULap cfru_ra_gen matches 1.. run scoreboard players set #CFRULap cfru_ra_gen 1
 #コース情報抽出
 data modify storage cfrace_utils:race CourseInfo.CourseID set from entity @s data.CFRU.CID
-data modify storage cfrace_utils:race CourseInfo.NodeEnd set from entity @s data.CFRU.SNEnd
+data modify storage cfrace_utils:race CourseInfo.OneWay set from entity @s data.CFRU.OneWay
 execute store result score #CFRUPointBorderP cfru_ra_gen run data get entity @s data.CFRU.SNBorder
 execute store result score #CFRUPointBorderM cfru_ra_gen run data get entity @s data.CFRU.SNBorder -1
+execute store result score #CFRUNodeEnd cfru_ra_gen run data get entity @s data.CFRU.SNEnd
 #レコード取得
 function cfrace_utils:race/game/record/read/read
 #ゲーム継続フラグ(rules/rules/leave用)

@@ -2,7 +2,7 @@
 playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 2 1
 tellraw @s {"translate":"コース作成を完了しました","color":"green","bold":true,"underlined":true}
 #スタート地点設定
-execute as @e[tag=CFRUCm,scores={cfru_cm_node=0}] run function cfrace_utils:course/new/finalize/startnode
+execute as @e[tag=CFRUCm,scores={cfru_cm_node=0}] positioned as @s run function cfrace_utils:course/new/finalize/startnode
 #ノード処理
 #コースID設定
 execute as @e[tag=CFRUCm] run data modify entity @s data.CFRU.CID set from storage cfrace_utils:course_manager Tmp.CFRU.CID
