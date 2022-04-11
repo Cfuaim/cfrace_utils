@@ -3,7 +3,7 @@ scoreboard players reset #CFRU_Time_Tic cfru_ra_gen
 scoreboard players set #CFRUGoalPlayer cfru_ra_gen -1
 kill @e[tag=CFRUStartLine]
 #ラップ数設定抽出
-execute store result score #CFRULap cfru_ra_gen run data get storage cfrace_utils:race Settings.Laps
+execute store result score #CFRULap cfru_ra_gen run data get storage cfrace_utils:rule Settings.Laps
 #例外回避
 execute unless score #CFRULap cfru_ra_gen matches 1.. run scoreboard players set #CFRULap cfru_ra_gen 1
 #コース情報抽出

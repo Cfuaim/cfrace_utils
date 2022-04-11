@@ -26,4 +26,4 @@ team modify cfru_ra_7th prefix {"text":"[7th] ","color":"dark_gray","bold":true}
 team add cfru_ra_8th
 team modify cfru_ra_8th prefix {"text":"[8th] ","color":"dark_gray","bold":true}
 #初期設定
-#data merge storage cfrace_utils:race {Settings:{Laps:3b}}
+#data merge storage cfrace_utils:rule {Settings:{Laps:3b}}
