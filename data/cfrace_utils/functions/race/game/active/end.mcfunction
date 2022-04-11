@@ -6,8 +6,9 @@ gamemode adventure @a[gamemode=!spectator,gamemode=!creative]
 execute if data storage cfrace_utils:race Settings.Lobby run schedule function cfrace_utils:race/gen/lobby/all 5s
 #スタートライン終了
 execute positioned as @e[tag=CFRUForceload] run forceload remove ~ ~
-#kill @e[tag=CFRUStartLine]
 tag @e[tag=CFRUStartLine] remove CFRUStartLine
+#最終結果表示
+function cfrace_utils:race/game/active/result/run
 #初期化
 data remove storage cfrace_utils:race Log
 data remove storage cfrace_utils:race CourseInfo

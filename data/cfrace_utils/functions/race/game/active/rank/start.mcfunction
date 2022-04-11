@@ -15,6 +15,7 @@ scoreboard players operation #CFRURank cfru_ra_gen = #CFRUGoalPlayer cfru_ra_gen
 #無限ループ防止
 execute store result score #CFRULoop cfru_ra_gen if entity @a[scores={cfru_ra_pl_part=1..}]
 function cfrace_utils:race/game/active/rank/loop
+scoreboard players reset #CFRURank
 scoreboard players reset #CFRULoop
 scoreboard players reset #CFRUPointMax
 #sidebar(チラツキ防止のためスコア入力後)
