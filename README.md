@@ -13,6 +13,8 @@ x: できないこと
 # 動作要件 / Requirement
 MinecraftJE 1.18.2
 # 使い方 / How To Use
+詳細は[wiki](https://github.com/Cfuaim/cfrace_utils/wiki)を参照してください
+
 0: 事前準備
 
 	0.1: コースを用意する
