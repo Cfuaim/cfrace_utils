@@ -3,7 +3,7 @@ playsound minecraft:entity.ender_dragon.death master @a ~ ~ ~ 0.3 2 0.3
 title @a times 0 60 20
 title @a title {"text":"= FINISH ="}
 gamemode adventure @a[gamemode=!spectator,gamemode=!creative]
-execute if data storage cfrace_utils:race Settings.Lobby run schedule function cfrace_utils:race/gen/lobby/all 5s
+execute if data storage cfrace_utils:rule Settings.Lobby run schedule function cfrace_utils:race/gen/lobby/all 5s
 #スタートライン終了
 execute positioned as @e[tag=CFRUForceload] run forceload remove ~ ~
 tag @e[tag=CFRUStartLine] remove CFRUStartLine
