@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:tnt",
+          "name": "minecraft:gunpowder",
           "functions": [
             {
               "function": "minecraft:set_name",
