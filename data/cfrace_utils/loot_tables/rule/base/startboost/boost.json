@@ -15,6 +15,14 @@
               }
             },
             {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "着地して1秒経過すると配布される"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_nbt",
               "tag": "{HideFlags:63,Fireworks:{Flight:-1b},cfru_rules:1b,cfru_startboost:1b}"
             }
